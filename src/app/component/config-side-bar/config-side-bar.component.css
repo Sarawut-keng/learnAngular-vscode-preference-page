@@ -1,0 +1,10 @@
+div {
+    padding-left: 100px;
+}
+ul {
+    list-style-type: none;
+}
+span {
+    display: list-item;
+    list-style: none;
+}

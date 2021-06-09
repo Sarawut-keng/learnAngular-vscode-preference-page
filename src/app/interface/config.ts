@@ -6,3 +6,10 @@ export interface Config {
     button?: string;
     text?: string;
 }
+
+
+export interface Menu {
+    name: string;
+    show: boolean;
+    value: string[];
+  }

@@ -1,1 +1,9 @@
-<p>config-side-bar works!</p>
+
+<div>
+    <p (click)="isSelected(item)" *ngFor="let item of menu">
+        <i class="las la-angle-right"></i> {{item.name}}
+        <span *ngIf="item.show == true">
+            <span *ngFor="let value of item.value">{{ value }}</span>
+        </span>
+    </p>
+</div>

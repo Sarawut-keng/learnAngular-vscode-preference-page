@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { MatSliderModule } from '@angular/material/slider';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,7 +10,6 @@ import { ConfigItemComponent } from './component/config-item/config-item.compone
 import { ConfigPageComponent } from './component/config-page/config-page.component';
 import { ConfigSideBarComponent } from './component/config-side-bar/config-side-bar.component';
 import { ConfigPageHeaderComponent } from './component/config-page-header/config-page-header.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,9 @@ import { ConfigPageHeaderComponent } from './component/config-page-header/config
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatSliderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
