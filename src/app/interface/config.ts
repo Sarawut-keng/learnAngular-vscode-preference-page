@@ -11,5 +11,5 @@ export interface Config {
 export interface Menu {
     name: string;
     show: boolean;
-    value: string[];
+    value?: string[];
   }

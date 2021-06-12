@@ -1,9 +1,14 @@
 <header>
-    <app-config-page-header></app-config-page-header>
+    <app-config-page-header 
+    (onUser)="clickUser($event)"
+    (onWorkspace)="clickUser($event)"
+    ></app-config-page-header>
 </header>
 <section>
     <nav>
-        <app-config-side-bar></app-config-side-bar>
+        <app-config-side-bar
+        [isUser]= "itIsUser"
+        ></app-config-side-bar>
     </nav>
     <article>
         <app-config-list></app-config-list>

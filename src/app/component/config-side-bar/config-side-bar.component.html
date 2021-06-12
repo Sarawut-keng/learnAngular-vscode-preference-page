@@ -1,7 +1,17 @@
-<div class="container">
+<div class="container" *ngIf="isUser">
     <p class="commonly">Commonly Used</p>
-    <div *ngFor="let item of menu">
-        <p (click)="isSelected(item)"><i class="las la-angle-right"></i>{{item.name}}</p>
+    <div *ngFor="let item of menuUser">
+        <p (click)="isSelectedUser(item)"><i class="las la-angle-right"></i>{{item.name}}</p>
+        <div *ngIf="item.show == true">
+            <p *ngFor="let value of item.value" class="sublist">{{ value }}</p>
+        </div>
+    </div>
+</div>
+<div class="container" *ngIf="!isUser">
+    <p class="commonly">Commonly Used</p>
+    <div *ngFor="let item of menuWorkspace">
+        <p (click)="isSelectedWork(item)"><i class="las la-angle-right" *ngIf="item.name != 'Window'"></i>
+            <i class="las la-angle-right" *ngIf="item.name == 'Window'" style="color: #1F222E;" ></i>{{item.name}}</p>
         <div *ngIf="item.show == true">
             <p *ngFor="let value of item.value" class="sublist">{{ value }}</p>
         </div>

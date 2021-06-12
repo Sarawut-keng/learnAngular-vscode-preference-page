@@ -8,12 +8,13 @@ import { Menu } from '../../interface/config';
 })
 export class ConfigSideBarComponent implements OnInit {
 
-  @Input() menu!: Menu[];
-
+  @Input() menuUser!: Menu[];
+  @Input() menuWorkspace!: Menu[];
+  @Input() isUser!: boolean;
 
   constructor() {
 
-    this.menu = [
+    this.menuUser = [
       {
         name:"Text Edit",
         show: false,
@@ -33,14 +34,53 @@ export class ConfigSideBarComponent implements OnInit {
         name: "Features", 
         show:false,
         value: ["Explorer", "Search", "Debug", "Testing", "SCM", "Extensions", "Terminal", "Task", "Problems", "Output", "Comments", "Remote", "Timeline", "Notebook"]
+      },
+      {
+        name: "Security",
+        show:false,
+        value: ["Workspace"]
       }];
+
+    this.menuWorkspace = [
+      {
+        name:"Text Edit",
+        show: false,
+        value: ["Cursor", "Find", "Font", "Formatting", "Diff Editor", "Minimap", "Suggestions", "Files"]
+      },
+      {
+        name: "Workbench",
+        show: false,
+        value: ["Appearance", "Breadcrumbs", "Editor Management", "Settings Editor", "Zen Mode", "Screencast Mode"]
+      },
+      {
+        name: "Window",
+        show: false,
+        value: []
+      },
+      {
+        name: "Features", 
+        show:false,
+        value: ["Explorer", "Search", "Debug", "Testing", "SCM", "Extensions", "Terminal", "Task", "Problems", "Output", "Comments", "Remote", "Timeline", "Notebook"]
+      }];
+
+
   }
 
   ngOnInit(): void {
+    
   }
 
-  isSelected(Item: Menu) {
-    for (let item of this.menu) {
+
+  isSelectedUser(Item: Menu) {
+    for (let item of this.menuUser) {
+      if (item.name == Item.name) {
+        Item.show = !Item.show;
+      }
+    }
+  }
+
+  isSelectedWork(Item: Menu) {
+    for (let item of this.menuWorkspace) {
       if (item.name == Item.name) {
         Item.show = !Item.show;
       }

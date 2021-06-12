@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ConfigPageHeaderComponent } from '../config-page-header/config-page-header.component';
 
 @Component({
   selector: 'app-config-page',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfigPageComponent implements OnInit {
 
+  itIsUser!: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickUser(isUser: boolean) {
+   this.itIsUser = isUser;
   }
 
 }
