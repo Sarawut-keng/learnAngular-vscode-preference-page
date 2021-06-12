@@ -3,5 +3,7 @@
     "cSpell.ignoreWords": [
         "mode",
         "screencast"
-    ]
+    ],
+    "editor.fontSize": 16,
+    "breadcrumbs.filePath": "off"
 }

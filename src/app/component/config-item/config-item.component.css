@@ -31,9 +31,10 @@ button {
     cursor: pointer;
 }
 .checkbox {
-    -webkit-transform: scale(1.5);
+    /* transform: scale(1.5); */
     margin-right: 10px;
     margin-left: 4px;
     border: 1px solid #4D5160;
     background-color: #1F222E;
+    cursor: pointer;
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import { Config } from '../../interface/config';
 
 @Component({
@@ -14,5 +14,6 @@ export class ConfigItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
 
 }

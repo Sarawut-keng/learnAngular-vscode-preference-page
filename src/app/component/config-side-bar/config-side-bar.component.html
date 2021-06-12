@@ -1,9 +1,9 @@
-
-<div>
-    <p (click)="isSelected(item)" *ngFor="let item of menu">
-        <i class="las la-angle-right"></i> {{item.name}}
-        <span *ngIf="item.show == true">
-            <span *ngFor="let value of item.value">{{ value }}</span>
-        </span>
-    </p>
+<div class="container">
+    <p class="commonly">Commonly Used</p>
+    <div *ngFor="let item of menu">
+        <p (click)="isSelected(item)"><i class="las la-angle-right"></i>{{item.name}}</p>
+        <div *ngIf="item.show == true">
+            <p *ngFor="let value of item.value" class="sublist">{{ value }}</p>
+        </div>
+    </div>
 </div>

@@ -1,7 +1,12 @@
-<div>
+<div> 
     <h2>Commonly Used</h2>
     <app-config-item
     *ngFor="let item of CommonlyUsed"
+    [configItem]=item>
+    </app-config-item>
+    <h2>Text Editor</h2>
+    <app-config-item
+    *ngFor="let item of TextEditor"
     [configItem]=item>
     </app-config-item>
 </div>

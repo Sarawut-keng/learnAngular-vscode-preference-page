@@ -1,6 +1,6 @@
 <div>
     <p class="name">{{ configItem.name }}</p>
-    <p><input class="checkbox" type="checkbox" *ngIf="configItem.type == 1">{{ configItem.description }}</p>
+    <p><input class="checkbox" type="checkbox" *ngIf="configItem.type == 1"><span class="checkmark"></span>{{ configItem.description }}</p>
     <input class="input" type="text" *ngIf="configItem.type == 0" value="{{ configItem.text }}">
     <select class="input" *ngIf="configItem.type == 2">
         <option *ngFor="let item of configItem.dropdown">{{ item }}</option>

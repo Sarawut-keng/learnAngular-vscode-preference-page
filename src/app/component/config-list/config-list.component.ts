@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Config } from '../../interface/config';
+import { ConfigItemComponent } from '../config-item/config-item.component';
 
 @Component({
   selector: 'app-config-list',
@@ -129,10 +130,100 @@ export class ConfigListComponent implements OnInit {
       name: "Workbench > Editor: Enable Preview",
       description: "Controls wheter opened editors show as preview. Preview editors do not keep open and are reused until explicitly set to be kept open",
       type: 1
-    }]
+    }];
+
+    this.TextEditor = [
+      {
+        name: "Accessibility Page Size",
+        description: "Controls the number of lines in the editor that can be read out by a screen reader at once. When we detect a screen reader we automatically set the default to be 500. Warning: this has a performance implication for numbers larger than the default.",
+        type: 0,
+        text: "10"
+      },
+      {
+        name: "Accessibility Support",
+        description: "Controls whether the editor should run in a mode where it is optimized for screen readers. Setting to on will disable word wrapping.",
+        type: 2,
+        dropdown: ["auto", "on", "off"]
+      },
+      {
+        name: "Auto Closing Brackets",
+        description: "Controls whether the editor should automatically close brackets after the user adds an opening bracket.",
+        type: 2,
+        dropdown: ["always", "languageDefine", "beforeWhitespace", "never"]
+      },
+      {
+        name: "Auto Closing Delete",
+        description: "Controls whether the editor should remove adjacent closing quotes or brackets when deleting.",
+        type: 2,
+        dropdown: ["always", "auto", "never"]
+      },
+      {
+        name: "Auto Closing Overtype",
+        description: "Controls whether the editor should type over closing quotes or brackets.",
+        type: 2,
+        dropdown: ["always", "auto", "never"]
+      },
+      {
+        name: "Auto Closing Quotes",
+        description: "Controls whether the editor should automatically close quotes after the user adds an opening quote.",
+        type: 2,
+        dropdown: ["always", "languageDefine", "beforeWhitespace", "never"]
+      },
+      {
+        name: "Auto Indent",
+        description: "Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.",
+        type: 2,
+        dropdown: ["none", "keep", "bracket", "Advance", "Full"]
+      },
+      {
+        name: "Auto Surround",
+        description: "Controls whether the editor should automatically surround selections when typing quotes or brackets.",
+        type: 2,
+        dropdown: ["always", "languageDefine", "beforeWhitespace", "never"]
+      },
+      {
+        name: "Code Actions On Save",
+        description: "Code action kinds to be run on save",
+        type: 3,
+        button: "Edit in settings.json"
+      },
+      {
+        name: "Code Lens",
+        description: "Controls whether the editor shows CodeLens.",
+        type: 1
+      },
+      {
+        name: "Code Lens Font Family",
+        description: "Controls the font family for CodeLens.",
+        type: 0,
+        text: ""
+      },
+      {
+        name: "Code Lens Font Size",
+        description: "Controls the font size in pixels for CodeLens. When set to `0`, the 90% of `#editor.fontSize#` is used.",
+        type: 0,
+        text: "0"
+      },
+      {
+        name: "Color Decorators",
+        description: "Controls whether the editor should render the inline color decorators and color picker.",
+        type: 1
+      },
+      {
+        name: "Column Selection",
+        description: "Enable that the selection with mouse and keys is doing column selection.",
+        type: 1
+      },
+      {
+        name: "Comments: Ignore Empty Lines",
+        description: "Controls if empty lines should be ignores with toggle, add or remove actions for line comments.",
+        type: 1
+      }
+    ]
   }
 
   ngOnInit(): void {
   }
+
 
 }

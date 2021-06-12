@@ -15,22 +15,22 @@ export class ConfigSideBarComponent implements OnInit {
 
     this.menu = [
       {
-        name:"textEdit",
+        name:"Text Edit",
         show: false,
         value: ["Cursor", "Find", "Font", "Formatting", "Diff Editor", "Minimap", "Suggestions", "Files"]
       },
       {
-        name: "workbench",
+        name: "Workbench",
         show: false,
         value: ["Appearance", "Breadcrumbs", "Editor Management", "Settings Editor", "Zen Mode", "Screencast Mode"]
       },
       {
-        name: "window",
+        name: "Window",
         show: false,
         value: ["New Window"]
       },
       {
-        name: "features", 
+        name: "Features", 
         show:false,
         value: ["Explorer", "Search", "Debug", "Testing", "SCM", "Extensions", "Terminal", "Task", "Problems", "Output", "Comments", "Remote", "Timeline", "Notebook"]
       }];

@@ -1,10 +1,12 @@
-div {
+.container {
     padding-left: 100px;
 }
-ul {
-    list-style-type: none;
+.commonly {
+    padding-left: 13px;
 }
-span {
-    display: list-item;
-    list-style: none;
+.sublist {
+    padding-left: 13px;
+}
+p {
+    cursor: pointer;
 }
